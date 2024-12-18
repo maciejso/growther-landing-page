@@ -44,7 +44,7 @@ const Index = () => {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-2 border-white hover:bg-white/10 transition-colors w-full sm:w-auto text-lg font-semibold animate-fade-up opacity-0"
+                className="border-2 border-white text-white hover:bg-white/10 transition-colors w-full sm:w-auto text-lg font-semibold animate-fade-up opacity-0"
                 style={{ animationDelay: "500ms" }}
               >
                 For Enterprises
