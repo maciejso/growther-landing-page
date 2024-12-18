@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { ServiceCard } from "@/components/ServiceCard";
 import { BarChart3, Megaphone, Target, TrendingUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
@@ -27,9 +28,28 @@ const Index = () => {
             <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6">
               Transform Your <span className="gradient-text">Digital Presence</span>
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-xl text-gray-200 mb-12">
               We help businesses grow through strategic marketing solutions and data-driven insights.
             </p>
+            
+            {/* Two CTAs for different target audiences */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-start items-center sm:items-start">
+              <Button 
+                size="lg"
+                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity w-full sm:w-auto text-lg font-semibold animate-fade-up opacity-0"
+                style={{ animationDelay: "400ms" }}
+              >
+                For Startups
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-2 border-white hover:bg-white/10 transition-colors w-full sm:w-auto text-lg font-semibold animate-fade-up opacity-0"
+                style={{ animationDelay: "500ms" }}
+              >
+                For Enterprises
+              </Button>
+            </div>
           </div>
         </div>
 

@@ -5,7 +5,7 @@ export const Navbar = () => {
     <nav className="fixed w-full z-50 px-4 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-6 py-3">
         <div className="text-2xl font-heading font-bold gradient-text">
-          MarketPro
+          Growther
         </div>
         <div className="hidden md:flex items-center gap-8 font-medium">
           <a href="#services" className="hover:text-primary transition-colors">Services</a>
