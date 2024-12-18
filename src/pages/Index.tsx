@@ -6,19 +6,12 @@ import { Button } from "@/components/ui/button";
 const Index = () => {
   return (
     <div className="min-h-screen relative text-white">
-      {/* Background Image with Split Overlays */}
-      <div 
-        className="absolute inset-0 z-0 flex"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=2000')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Left side overlay */}
-        <div className="w-1/2 h-full bg-gradient-to-br from-black/80 via-primary/70 to-primary/50" />
-        {/* Right side overlay */}
-        <div className="w-1/2 h-full bg-gradient-to-bl from-black/80 via-secondary/70 to-secondary/50" />
+      {/* Gradient Background with Split Overlays */}
+      <div className="absolute inset-0 z-0 flex">
+        {/* Left side gradient */}
+        <div className="w-1/2 h-full bg-gradient-to-br from-[#2E7D32] via-[#388E3C] to-[#4CAF50]" />
+        {/* Right side gradient */}
+        <div className="w-1/2 h-full bg-gradient-to-bl from-[#2E7D32] via-[#388E3C] to-[#4CAF50]" />
       </div>
 
       {/* Content */}
