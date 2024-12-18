@@ -39,7 +39,7 @@ const Index = () => {
                 className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity w-full sm:w-auto text-lg font-semibold animate-fade-up opacity-0"
                 style={{ animationDelay: "400ms" }}
               >
-                For Startups
+                For Creators 
               </Button>
               <Button 
                 size="lg"
