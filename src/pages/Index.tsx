@@ -21,7 +21,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 text-center">
           <div className="max-w-3xl mx-auto animate-fade-up opacity-0" style={{ animationDelay: "200ms" }}>
             <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6 text-white drop-shadow-[0_4px_3px_rgba(0,0,0,0.3)] [text-shadow:_2px_2px_2px_rgb(0_0_0_/_30%)]">
-              Transform Your <span className="text-[#E7F0FD] font-extrabold [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Digital Presence</span>
+              Transform Your <span className="text-[#ACCBEE] font-extrabold [text-shadow:_1px_1px_2px_rgb(0_0_0_/_30%)]">Digital Presence</span>
             </h1>
             <p className="text-xl text-gray-100 font-medium mb-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)] tracking-wide [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)] backdrop-blur-[2px]">
               We help businesses grow through strategic marketing solutions and data-driven insights.

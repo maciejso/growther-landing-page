@@ -7,7 +7,7 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between glass rounded-full px-6 py-3">
         {/* Logo and Brand Name */}
         <div className="flex items-center gap-3">
-          <span className="text-2xl font-heading font-bold gradient-text">Growther</span>
+          <span className="text-2xl font-heading font-bold text-[#ACCBEE]">Growther</span>
         </div>
 
         {/* Navigation Links */}
@@ -18,7 +18,7 @@ export const Navbar = () => {
         </div>
 
         {/* Call-to-Action Button */}
-        <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+        <Button className="bg-[#ACCBEE] hover:bg-[#E7F0FD] text-[#243949] transition-opacity">
           Get Started
         </Button>
       </div>
