@@ -8,10 +8,10 @@ const Index = () => {
     <div className="min-h-screen relative text-white">
       {/* Gradient Background with Split Overlays */}
       <div className="absolute inset-0 z-0 flex">
-        {/* Left side gradient - using lighter shades */}
-        <div className="w-1/2 h-full bg-gradient-to-br from-[#90EE90] via-[#98FB98] to-[#A7F3A7]" />
-        {/* Right side gradient - using lighter shades */}
-        <div className="w-1/2 h-full bg-gradient-to-bl from-[#90EE90] via-[#98FB98] to-[#A7F3A7]" />
+        {/* Left side gradient - using darker shades */}
+        <div className="w-1/2 h-full bg-gradient-to-br from-[#7BC47F] via-[#86CF8A] to-[#93D997]" />
+        {/* Right side gradient - using darker shades */}
+        <div className="w-1/2 h-full bg-gradient-to-bl from-[#7BC47F] via-[#86CF8A] to-[#93D997]" />
       </div>
 
       {/* Content */}
