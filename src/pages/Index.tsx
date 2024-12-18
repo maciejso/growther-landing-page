@@ -8,10 +8,10 @@ const Index = () => {
     <div className="min-h-screen relative text-white">
       {/* Gradient Background with Split Overlays */}
       <div className="absolute inset-0 z-0 flex">
-        {/* Left side gradient */}
-        <div className="w-1/2 h-full bg-gradient-to-br from-[#2E7D32] via-[#388E3C] to-[#4CAF50]" />
-        {/* Right side gradient */}
-        <div className="w-1/2 h-full bg-gradient-to-bl from-[#2E7D32] via-[#388E3C] to-[#4CAF50]" />
+        {/* Left side gradient - using lighter shades */}
+        <div className="w-1/2 h-full bg-gradient-to-br from-[#90EE90] via-[#98FB98] to-[#A7F3A7]" />
+        {/* Right side gradient - using lighter shades */}
+        <div className="w-1/2 h-full bg-gradient-to-bl from-[#90EE90] via-[#98FB98] to-[#A7F3A7]" />
       </div>
 
       {/* Content */}
@@ -21,10 +21,10 @@ const Index = () => {
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-4 pt-32 pb-20 text-center">
           <div className="max-w-3xl mx-auto animate-fade-up opacity-0" style={{ animationDelay: "200ms" }}>
-            <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6 text-white drop-shadow-[0_4px_3px_rgba(0,0,0,0.4)] [text-shadow:_2px_2px_2px_rgb(0_0_0_/_20%)]">
+            <h1 className="font-heading font-bold text-5xl md:text-7xl mb-6 text-gray-800 drop-shadow-[0_4px_3px_rgba(255,255,255,0.4)] [text-shadow:_2px_2px_2px_rgb(255_255_255_/_30%)]">
               Transform Your <span className="gradient-text font-extrabold [text-shadow:_1px_1px_2px_rgb(255_255_255_/_30%)]">Digital Presence</span>
             </h1>
-            <p className="text-xl text-white font-medium mb-12 drop-shadow-[0_2px_2px_rgba(0,0,0,0.3)] tracking-wide [text-shadow:_1px_1px_1px_rgb(0_0_0_/_20%)] backdrop-blur-[2px]">
+            <p className="text-xl text-gray-800 font-medium mb-12 drop-shadow-[0_2px_2px_rgba(255,255,255,0.3)] tracking-wide [text-shadow:_1px_1px_1px_rgb(255_255_255_/_20%)] backdrop-blur-[2px]">
               We help businesses grow through strategic marketing solutions and data-driven insights.
             </p>
             
@@ -42,7 +42,7 @@ const Index = () => {
                 <Button 
                   size="lg"
                   variant="outline"
-                  className="border-2 border-white bg-white hover:bg-white/90 transition-colors w-full sm:w-auto text-lg font-semibold text-gray-800 shadow-lg backdrop-blur-sm"
+                  className="border-2 border-gray-800 bg-white hover:bg-white/90 transition-colors w-full sm:w-auto text-lg font-semibold text-gray-800 shadow-lg backdrop-blur-sm"
                 >
                   For Enterprises
                 </Button>
