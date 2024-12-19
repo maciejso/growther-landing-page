@@ -50,39 +50,90 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="max-w-7xl mx-auto px-4 py-20">
+        {/* Services Section */}
+        <section id="services" className="max-w-7xl mx-auto px-4 py-20">
+          <h2 className="text-4xl font-heading font-bold mb-12 text-center text-[#ACCBEE]">Our Affiliate Marketing Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="animate-fade-up opacity-0" style={{ animationDelay: "400ms" }}>
               <ServiceCard
                 icon={<Megaphone />}
-                title="Digital Marketing"
-                description="Strategic campaigns that drive engagement and conversions"
+                title="Affiliate Program Setup"
+                description="Launch your affiliate program with our comprehensive setup and management solutions"
               />
             </div>
             <div className="animate-fade-up opacity-0" style={{ animationDelay: "500ms" }}>
               <ServiceCard
                 icon={<BarChart3 />}
-                title="Analytics"
-                description="Data-driven insights to optimize your marketing efforts"
+                title="Performance Tracking"
+                description="Advanced analytics and tracking systems for monitoring affiliate success"
               />
             </div>
             <div className="animate-fade-up opacity-0" style={{ animationDelay: "600ms" }}>
               <ServiceCard
                 icon={<Target />}
-                title="Brand Strategy"
-                description="Build a compelling brand that resonates with your audience"
+                title="Partner Recruitment"
+                description="Strategic recruitment of high-quality affiliates for your program"
               />
             </div>
             <div className="animate-fade-up opacity-0" style={{ animationDelay: "700ms" }}>
               <ServiceCard
                 icon={<TrendingUp />}
-                title="Growth Marketing"
-                description="Scalable solutions for sustainable business growth"
+                title="Commission Management"
+                description="Flexible commission structures and automated payment systems"
               />
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="max-w-7xl mx-auto px-4 py-20 glass my-20">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-heading font-bold mb-8 text-[#ACCBEE]">About Our Platform</h2>
+            <p className="text-lg mb-8 text-gray-100">
+              Growther is revolutionizing the affiliate marketing landscape by providing cutting-edge tools and technologies
+              that empower businesses to scale their affiliate programs effectively.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              <div className="glass p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-[#ACCBEE]">Smart Automation</h3>
+                <p className="text-gray-200">Automated tracking and payment systems for seamless operation</p>
+              </div>
+              <div className="glass p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-[#ACCBEE]">Real-time Analytics</h3>
+                <p className="text-gray-200">Comprehensive dashboards for performance monitoring</p>
+              </div>
+              <div className="glass p-6 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-[#ACCBEE]">Partner Network</h3>
+                <p className="text-gray-200">Access to a vast network of pre-vetted affiliates</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="max-w-7xl mx-auto px-4 py-20">
+          <div className="max-w-2xl mx-auto glass p-8 rounded-xl">
+            <h2 className="text-4xl font-heading font-bold mb-8 text-center text-[#ACCBEE]">Get Started Today</h2>
+            <p className="text-center mb-8 text-gray-100">
+              Ready to transform your affiliate marketing strategy? Contact us to learn how Growther can help scale your business.
+            </p>
+            <div className="flex flex-col gap-4">
+              <Button 
+                size="lg"
+                className="bg-[#ACCBEE] hover:bg-[#E7F0FD] text-[#243949] transition-all hover:scale-105 w-full text-lg font-semibold"
+              >
+                Schedule a Demo
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                className="border-2 border-[#ACCBEE] bg-transparent hover:bg-[#ACCBEE]/10 text-white transition-all hover:scale-105 w-full text-lg font-semibold"
+              >
+                View Pricing
+              </Button>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
