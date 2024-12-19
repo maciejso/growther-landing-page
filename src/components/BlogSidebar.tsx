@@ -28,23 +28,26 @@ export function BlogSidebar() {
   ];
 
   return (
-    <Sidebar className="border-r border-gray-200">
-      <SidebarHeader className="border-b border-gray-200">
+    <Sidebar className="border-l border-white/20" variant="floating">
+      <SidebarHeader className="border-b border-white/20 bg-white/5">
         <div className="relative">
-          <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-gray-500" />
-          <SidebarInput className="pl-8" placeholder="Search articles..." />
+          <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-[#ACCBEE]" />
+          <SidebarInput 
+            className="glass pl-8 text-white placeholder:text-[#ACCBEE]/70 focus-visible:ring-[#ACCBEE]/50" 
+            placeholder="Search articles..." 
+          />
         </div>
       </SidebarHeader>
 
-      <SidebarContent>
+      <SidebarContent className="bg-white/5 backdrop-blur-lg">
         <SidebarGroup>
-          <SidebarGroupLabel>Categories</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[#ACCBEE] font-heading">Categories</SidebarGroupLabel>
           <SidebarGroupContent>
             <div className="space-y-1">
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-gray-100"
+                  className="w-full rounded-lg px-3 py-2 text-left text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-[#ACCBEE]"
                 >
                   {category}
                 </button>
@@ -54,13 +57,13 @@ export function BlogSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel>Recent Posts</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[#ACCBEE] font-heading">Recent Posts</SidebarGroupLabel>
           <SidebarGroupContent>
             <div className="space-y-1">
               {recentPosts.map((post) => (
                 <button
                   key={post}
-                  className="w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-gray-100"
+                  className="w-full rounded-lg px-3 py-2 text-left text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-[#ACCBEE]"
                 >
                   {post}
                 </button>
