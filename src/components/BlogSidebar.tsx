@@ -29,7 +29,7 @@ export function BlogSidebar() {
 
   return (
     <Sidebar className="border-l border-white/20" variant="floating" side="right">
-      <SidebarHeader className="border-b border-white/20 bg-white/5">
+      <SidebarHeader className="border-b border-white/20 bg-[#1A1F2C]/90">
         <div className="relative">
           <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-[#ACCBEE]" />
           <SidebarInput 
@@ -39,7 +39,7 @@ export function BlogSidebar() {
         </div>
       </SidebarHeader>
 
-      <SidebarContent className="bg-white/5 backdrop-blur-lg">
+      <SidebarContent className="bg-[#1A1F2C]/90 backdrop-blur-lg">
         <SidebarGroup>
           <SidebarGroupLabel className="text-[#ACCBEE] font-heading">Categories</SidebarGroupLabel>
           <SidebarGroupContent>
