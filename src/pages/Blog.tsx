@@ -1,6 +1,83 @@
 import { Link } from "react-router-dom";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import { useState } from "react";
+
+const ITEMS_PER_PAGE = 9;
 
 const Blog = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Sample blog posts data - in a real app, this would come from an API
+  const blogPosts = [
+    {
+      slug: "maximizing-roi",
+      title: "Maximizing Affiliate Marketing ROI",
+      description: "Learn the best strategies to increase your affiliate marketing return on investment through data-driven decisions.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    },
+    {
+      slug: "partner-relationships",
+      title: "Building Strong Partner Relationships",
+      description: "Discover how to cultivate lasting partnerships with top affiliates in your niche market.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    },
+    {
+      slug: "trends-2024",
+      title: "Affiliate Marketing Trends 2024",
+      description: "Stay ahead of the curve with our comprehensive guide to emerging trends in affiliate marketing.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+    },
+    {
+      slug: "conversion-optimization",
+      title: "Optimizing Conversion Rates",
+      description: "Expert tips and techniques to improve your affiliate program's conversion rates and performance.",
+      image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9"
+    },
+    {
+      slug: "content-marketing",
+      title: "Content Marketing for Affiliates",
+      description: "Master the art of creating compelling content that drives affiliate sales and engagement.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+    },
+    {
+      slug: "social-media",
+      title: "Social Media Strategies",
+      description: "Leverage social platforms effectively to boost your affiliate marketing presence and reach.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    },
+    {
+      slug: "seo-guide",
+      title: "SEO for Affiliate Marketers",
+      description: "Essential SEO techniques to improve your affiliate content's visibility and organic traffic.",
+      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334"
+    },
+    {
+      slug: "email-marketing",
+      title: "Email Marketing Excellence",
+      description: "Build and nurture your email list to create a sustainable affiliate marketing income stream.",
+      image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
+    },
+    {
+      slug: "analytics",
+      title: "Analytics & Tracking",
+      description: "Master the tools and metrics that matter for measuring and improving your affiliate success.",
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
+    }
+  ];
+
+  const totalPages = Math.ceil(blogPosts.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentPosts = blogPosts.slice(startIndex, endIndex);
+
   return (
     <div className="min-h-screen relative text-white">
       {/* Gradient Background with Split Overlays */}
@@ -17,161 +94,60 @@ const Blog = () => {
             Latest Blog Posts
           </h1>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Blog Post Cards */}
-            <Link to="/blog/maximizing-roi" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-                  alt="Maximizing ROI"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Maximizing Affiliate Marketing ROI
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Learn the best strategies to increase your affiliate marketing return on investment through data-driven decisions.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/partner-relationships" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
-                  alt="Partner Relationships"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Building Strong Partner Relationships
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Discover how to cultivate lasting partnerships with top affiliates in your niche market.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/trends-2024" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
-                  alt="2024 Trends"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Affiliate Marketing Trends 2024
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Stay ahead of the curve with our comprehensive guide to emerging trends in affiliate marketing.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/conversion-optimization" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9"
-                  alt="Conversion Optimization"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Optimizing Conversion Rates
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Expert tips and techniques to improve your affiliate program's conversion rates and performance.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/content-marketing" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
-                  alt="Content Marketing"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Content Marketing for Affiliates
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Master the art of creating compelling content that drives affiliate sales and engagement.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/social-media" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
-                  alt="Social Media"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Social Media Strategies
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Leverage social platforms effectively to boost your affiliate marketing presence and reach.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/seo-guide" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334"
-                  alt="SEO Guide"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                SEO for Affiliate Marketers
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Essential SEO techniques to improve your affiliate content's visibility and organic traffic.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/email-marketing" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952"
-                  alt="Email Marketing"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Email Marketing Excellence
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Build and nurture your email list to create a sustainable affiliate marketing income stream.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
-
-            <Link to="/blog/analytics" className="glass p-6 rounded-xl group">
-              <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7"
-                  alt="Analytics"
-                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
-                Analytics & Tracking
-              </h2>
-              <p className="text-gray-200 mb-4">
-                Master the tools and metrics that matter for measuring and improving your affiliate success.
-              </p>
-              <span className="text-[#ACCBEE]">Read More →</span>
-            </Link>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+            {currentPosts.map((post) => (
+              <Link 
+                key={post.slug}
+                to={`/blog/${post.slug}`} 
+                className="glass p-6 rounded-xl group"
+              >
+                <div className="relative h-48 mb-4 overflow-hidden rounded-lg">
+                  <img 
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
+                  {post.title}
+                </h2>
+                <p className="text-gray-200 mb-4">
+                  {post.description}
+                </p>
+                <span className="text-[#ACCBEE]">Read More →</span>
+              </Link>
+            ))}
           </div>
+
+          {/* Pagination */}
+          <Pagination className="mt-8">
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious 
+                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                  className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
+                />
+              </PaginationItem>
+              
+              {Array.from({ length: totalPages }).map((_, index) => (
+                <PaginationItem key={index}>
+                  <PaginationLink
+                    onClick={() => setCurrentPage(index + 1)}
+                    isActive={currentPage === index + 1}
+                  >
+                    {index + 1}
+                  </PaginationLink>
+                </PaginationItem>
+              ))}
+
+              <PaginationItem>
+                <PaginationNext 
+                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                  className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
+                />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </div>
     </div>
