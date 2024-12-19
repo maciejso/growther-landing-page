@@ -17,7 +17,7 @@ const Blog = () => {
             Latest Blog Posts
           </h1>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Blog Post Cards */}
             <div className="glass p-6 rounded-xl">
               <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
@@ -55,6 +55,56 @@ const Blog = () => {
               </h2>
               <p className="text-gray-200 mb-4">
                 Expert tips and techniques to improve your affiliate program's conversion rates and performance.
+              </p>
+              <span className="text-[#ACCBEE]">Read More →</span>
+            </div>
+
+            <div className="glass p-6 rounded-xl">
+              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
+                Content Marketing for Affiliates
+              </h2>
+              <p className="text-gray-200 mb-4">
+                Master the art of creating compelling content that drives affiliate sales and engagement.
+              </p>
+              <span className="text-[#ACCBEE]">Read More →</span>
+            </div>
+
+            <div className="glass p-6 rounded-xl">
+              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
+                Social Media Strategies
+              </h2>
+              <p className="text-gray-200 mb-4">
+                Leverage social platforms effectively to boost your affiliate marketing presence and reach.
+              </p>
+              <span className="text-[#ACCBEE]">Read More →</span>
+            </div>
+
+            <div className="glass p-6 rounded-xl">
+              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
+                SEO for Affiliate Marketers
+              </h2>
+              <p className="text-gray-200 mb-4">
+                Essential SEO techniques to improve your affiliate content's visibility and organic traffic.
+              </p>
+              <span className="text-[#ACCBEE]">Read More →</span>
+            </div>
+
+            <div className="glass p-6 rounded-xl">
+              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
+                Email Marketing Excellence
+              </h2>
+              <p className="text-gray-200 mb-4">
+                Build and nurture your email list to create a sustainable affiliate marketing income stream.
+              </p>
+              <span className="text-[#ACCBEE]">Read More →</span>
+            </div>
+
+            <div className="glass p-6 rounded-xl">
+              <h2 className="text-2xl font-heading font-bold mb-4 text-[#E7F0FD]">
+                Analytics & Tracking
+              </h2>
+              <p className="text-gray-200 mb-4">
+                Master the tools and metrics that matter for measuring and improving your affiliate success.
               </p>
               <span className="text-[#ACCBEE]">Read More →</span>
             </div>
