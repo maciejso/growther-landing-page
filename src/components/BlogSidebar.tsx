@@ -31,9 +31,9 @@ export function BlogSidebar() {
     <Sidebar className="border-l border-white/20" variant="floating" side="right">
       <SidebarHeader className="border-b border-white/20 bg-white/5">
         <div className="relative">
-          <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-[#ACCBEE]" />
+          <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-[#243949]" />
           <SidebarInput 
-            className="glass pl-8 text-white placeholder:text-[#ACCBEE]/70 focus-visible:ring-[#ACCBEE]/50" 
+            className="glass pl-8 text-[#243949] placeholder:text-[#243949]/70 focus-visible:ring-[#243949]/50" 
             placeholder="Search articles..." 
           />
         </div>
@@ -41,13 +41,13 @@ export function BlogSidebar() {
 
       <SidebarContent className="bg-white/5 backdrop-blur-lg">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[#ACCBEE] font-heading">Categories</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[#243949] font-heading">Categories</SidebarGroupLabel>
           <SidebarGroupContent>
             <div className="space-y-1">
               {categories.map((category) => (
                 <button
                   key={category}
-                  className="w-full rounded-lg px-3 py-2 text-left text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-[#ACCBEE]"
+                  className="w-full rounded-lg px-3 py-2 text-left text-sm text-[#243949] transition-colors hover:bg-white/10 hover:text-[#517fa4]"
                 >
                   {category}
                 </button>
@@ -57,13 +57,13 @@ export function BlogSidebar() {
         </SidebarGroup>
 
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[#ACCBEE] font-heading">Recent Posts</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[#243949] font-heading">Recent Posts</SidebarGroupLabel>
           <SidebarGroupContent>
             <div className="space-y-1">
               {recentPosts.map((post) => (
                 <button
                   key={post}
-                  className="w-full rounded-lg px-3 py-2 text-left text-sm text-white/90 transition-colors hover:bg-white/10 hover:text-[#ACCBEE]"
+                  className="w-full rounded-lg px-3 py-2 text-left text-sm text-[#243949] transition-colors hover:bg-white/10 hover:text-[#517fa4]"
                 >
                   {post}
                 </button>
