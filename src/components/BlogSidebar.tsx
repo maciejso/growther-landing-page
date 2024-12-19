@@ -28,12 +28,12 @@ export function BlogSidebar() {
   ];
 
   return (
-    <Sidebar className="border-l border-white/20 mt-[72px] glass" variant="floating" side="right">
+    <Sidebar className="border-l border-white/20 mt-[72px] bg-[#1A1F2C]/80 backdrop-blur-lg" variant="floating" side="right">
       <SidebarHeader className="border-b border-white/20">
         <div className="relative">
           <Search className="absolute left-2 top-1/2 h-4 w-4 -translate-y-1/2 transform text-[#ACCBEE]" />
           <SidebarInput 
-            className="glass pl-8 text-white placeholder:text-[#ACCBEE]/70 focus-visible:ring-[#ACCBEE]/50" 
+            className="bg-white/5 pl-8 text-white placeholder:text-[#ACCBEE]/70 focus-visible:ring-[#ACCBEE]/50" 
             placeholder="Search articles..." 
           />
         </div>
