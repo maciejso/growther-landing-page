@@ -83,7 +83,6 @@ const Blog = () => {
   return (
     <SidebarProvider>
       <div className="flex min-h-screen w-full">
-        <BlogSidebar />
         <div className="relative flex-1 text-white">
           <div className="absolute inset-0 z-0">
             <div className="h-full w-full bg-gradient-to-br from-[#243949] via-[#517fa4] to-[#517fa4] opacity-95">
@@ -153,6 +152,7 @@ const Blog = () => {
             </div>
           </div>
         </div>
+        <BlogSidebar />
       </div>
     </SidebarProvider>
   );
