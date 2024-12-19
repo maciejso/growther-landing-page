@@ -12,15 +12,15 @@ export const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8 font-medium">
-          <Link to="/" className="hover:text-primary transition-colors">Home</Link>
-          <a href="#services" className="hover:text-primary transition-colors">Services</a>
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
-          <Link to="/blog" className="hover:text-primary transition-colors">Blog</Link>
+          <Link to="/" className="hover:text-[#ACCBEE] transition-colors">Home</Link>
+          <a href="#services" className="hover:text-[#ACCBEE] transition-colors">Services</a>
+          <a href="#about" className="hover:text-[#ACCBEE] transition-colors">About</a>
+          <a href="#contact" className="hover:text-[#ACCBEE] transition-colors">Contact</a>
+          <Link to="/blog" className="hover:text-[#ACCBEE] transition-colors">Blog</Link>
         </div>
 
         {/* Call-to-Action Button */}
-        <Button className="bg-[#ACCBEE] hover:bg-[#E7F0FD] text-[#243949] transition-opacity">
+        <Button className="bg-[#ACCBEE] hover:bg-[#517fa4] text-[#243949] hover:text-white transition-all">
           Get Started
         </Button>
       </div>
